@@ -1,0 +1,567 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 effective-4.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name SurveillanceFramework
+import AdSupport
+import CoreTelephony.CTCarrier
+import SystemConfiguration.CaptiveNetwork
+import CommonCrypto/*.CC_LONG*/
+import CommonCrypto/*.CC_MD5*/
+import CommonCrypto/*.CC_MD5_DIGEST_LENGTH*/
+import Contacts
+import CoreLocation
+import CoreTelephony
+import EventKitUI
+import Foundation
+import Photos
+import StoreKit
+@_exported import SurveillanceFramework
+import Swift
+import SystemConfiguration
+@objc @_hasMissingDesignatedInitializers @objcMembers public class CheckPoint : ObjectiveC.NSObject {
+  @objc public func setAdditionalData(additionalData: [Swift.String : Any])
+  @objc required public init?(json: [Swift.String : Any])
+  @objc public func getJson() -> [Swift.String : Any]
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_hasMissingDesignatedInitializers public class Register : SurveillanceFramework.CheckPoint {
+  public init(user: SurveillanceFramework.User?)
+  @objc override public func getJson() -> [Swift.String : Any]
+  @objc required public init(json: [Swift.String : Any])
+  @objc deinit
+}
+public enum PaygilantError : Swift.Error {
+  case message
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: SurveillanceFramework.PaygilantError, b: SurveillanceFramework.PaygilantError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class PaygilantManager : ObjectiveC.NSObject {
+  @objc public static var shared: SurveillanceFramework.PaygilantManager
+  @objc public func setup(serverUrl: Swift.String, userId: Swift.String? = nil) throws
+  @objc public func getSessionId() -> Swift.String?
+  @objc public func getDeviceId() -> Swift.String?
+  @objc public func logout()
+  @objc public func arriveToCheckPoint(checkPoint: SurveillanceFramework.CheckPoint)
+  @objc public func initializeDeviceId()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CreditCardDetail {
+  public init(cardToken: Swift.String? = nil, cardId: Swift.String? = nil, bin: Swift.String? = nil, lastFourDigit: Swift.String? = nil, yearExpiryDate: Swift.Int? = nil, monthExpiryDate: Swift.Int? = nil)
+  public func getJson() -> [Swift.String : Any]
+  public init(json: [Swift.String : Any])
+  @objc deinit
+}
+public class BankAccountDetails {
+  public init(number: Swift.String? = nil, fullName: Swift.String? = nil, bsb: Swift.String? = nil)
+  public func getJson() -> [Swift.String : Any]
+  public init(json: [Swift.String : Any])
+  @objc deinit
+}
+@objc public enum CheckPointStatus : Swift.Int, Swift.CaseIterable {
+  case APPROVED
+  case DENIED
+  case CANCELLED
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+  public typealias AllCases = [SurveillanceFramework.CheckPointStatus]
+  public static var allCases: [SurveillanceFramework.CheckPointStatus] {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class CheckPointStatusToString : ObjectiveC.NSObject {
+  @objc public static func toString(type: SurveillanceFramework.CheckPointStatus) -> Swift.String
+  @objc public static func fromString(string: Swift.String) -> SurveillanceFramework.CheckPointStatus
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class CheckPointStatusEnumerator : ObjectiveC.NSObject {
+  public static func array() -> [SurveillanceFramework.CheckPointStatus]
+  @objc public static func dictionary() -> [Swift.String : Foundation.NSNumber]
+  @objc deinit
+  @objc override dynamic public init()
+}
+public enum SurveillanceType {
+  case SURVEILLANCE_CUSTOMER
+  case SURVEILLANCE_DEVICE
+  case SURVEILLANCE_LOCATION
+  case SURVEILLANCE_SIGNAL
+  public static func == (a: SurveillanceFramework.SurveillanceType, b: SurveillanceFramework.SurveillanceType) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+@objc public enum VerificationType : Swift.Int, Swift.CaseIterable {
+  case VERIFIED
+  case NOT_VERIFIED
+  case UNKNOWN
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+  public typealias AllCases = [SurveillanceFramework.VerificationType]
+  public static var allCases: [SurveillanceFramework.VerificationType] {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class VerificationTypeToString : ObjectiveC.NSObject {
+  @objc public static func toString(type: SurveillanceFramework.VerificationType) -> Swift.String
+  @objc public static func fromString(string: Swift.String) -> SurveillanceFramework.VerificationType
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class VerificationTypeEnumerator : ObjectiveC.NSObject {
+  public static func array() -> [SurveillanceFramework.VerificationType]
+  @objc public static func dictionary() -> [Swift.String : Foundation.NSNumber]
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_hasMissingDesignatedInitializers public class General : SurveillanceFramework.CheckPoint {
+  @objc public init(userId: Swift.String? = nil)
+  @objc override public func getJson() -> [Swift.String : Any]
+  @objc required public init(json: [Swift.String : Any])
+  @objc deinit
+}
+@objc public enum CurrencyCode : Swift.Int, Swift.CaseIterable {
+  case AFN
+  case EUR
+  case ALL
+  case DZD
+  case USD
+  case AOA
+  case XCD
+  case ARS
+  case AMD
+  case AWG
+  case AUD
+  case AZN
+  case BSD
+  case BHD
+  case BDT
+  case BBD
+  case BYN
+  case BZD
+  case XOF
+  case BMD
+  case INR
+  case BTN
+  case BOB
+  case BOV
+  case BAM
+  case BWP
+  case NOK
+  case BRL
+  case BND
+  case BGN
+  case BIF
+  case CVE
+  case KHR
+  case XAF
+  case CAD
+  case KYD
+  case CLP
+  case CLF
+  case CNY
+  case COP
+  case COU
+  case KMF
+  case CDF
+  case NZD
+  case CRC
+  case HRK
+  case CUP
+  case CUC
+  case ANG
+  case CZK
+  case DKK
+  case DJF
+  case DOP
+  case EGP
+  case SVC
+  case ERN
+  case ETB
+  case FKP
+  case FJD
+  case XPF
+  case GMD
+  case GEL
+  case GHS
+  case GIP
+  case GTQ
+  case GBP
+  case GNF
+  case GYD
+  case HTG
+  case HNL
+  case HKD
+  case HUF
+  case ISK
+  case IDR
+  case XDR
+  case IRR
+  case IQD
+  case ILS
+  case JMD
+  case JPY
+  case JOD
+  case KZT
+  case KES
+  case KPW
+  case KRW
+  case KWD
+  case KGS
+  case LAK
+  case LBP
+  case LSL
+  case ZAR
+  case LRD
+  case LYD
+  case CHF
+  case MOP
+  case MKD
+  case MGA
+  case MWK
+  case MYR
+  case MVR
+  case MRU
+  case MUR
+  case XUA
+  case MXN
+  case MXV
+  case MDL
+  case MNT
+  case MAD
+  case MZN
+  case MMK
+  case NAD
+  case NPR
+  case NIO
+  case NGN
+  case OMR
+  case PKR
+  case PAB
+  case PGK
+  case PYG
+  case PEN
+  case PHP
+  case PLN
+  case QAR
+  case RON
+  case RUB
+  case RWF
+  case SHP
+  case WST
+  case STN
+  case SAR
+  case RSD
+  case SCR
+  case SLL
+  case SGD
+  case XSU
+  case SBD
+  case SOS
+  case SSP
+  case LKR
+  case SDG
+  case SRD
+  case SZL
+  case SEK
+  case CHE
+  case CHW
+  case SYP
+  case TWD
+  case TJS
+  case TZS
+  case THB
+  case TOP
+  case TTD
+  case TND
+  case TRY
+  case TMT
+  case UGX
+  case UAH
+  case AED
+  case USN
+  case UYU
+  case UYI
+  case UYW
+  case UZS
+  case VUV
+  case VES
+  case VND
+  case YER
+  case ZMW
+  case ZWL
+  case XBA
+  case XBB
+  case XBC
+  case XBD
+  case XTS
+  case XXX
+  case XAU
+  case XPD
+  case XPT
+  case XAG
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+  public typealias AllCases = [SurveillanceFramework.CurrencyCode]
+  public static var allCases: [SurveillanceFramework.CurrencyCode] {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class CurrencyCodeToString : ObjectiveC.NSObject {
+  @objc public static func toString(type: SurveillanceFramework.CurrencyCode) -> Swift.String
+  @objc public static func fromString(string: Swift.String) -> SurveillanceFramework.CurrencyCode
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class CurrencyCodeEnumerator : ObjectiveC.NSObject {
+  public static func array() -> [SurveillanceFramework.CurrencyCode]
+  @objc public static func dictionary() -> [Swift.String : Foundation.NSNumber]
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public enum TransactionType : Swift.Int {
+  case PURCHASE
+  case MONEY_TRANSFER
+  case DEPOSIT
+  case WITHDRAW
+  @available(*, deprecated, renamed: "MONEY_TRANSFER", message: "no longer available ...")
+  case P2P
+  @available(*, deprecated, renamed: "PURCHASE", message: "no longer available ...")
+  case IN_STORE
+  @available(*, deprecated, renamed: "DEPOSIT", message: "no longer available ...")
+  case LOAD
+  @available(*, deprecated, renamed: "PURCHASE", message: "no longer available ...")
+  case AIRTIME
+  @available(*, deprecated, renamed: "PURCHASE", message: "no longer available ...")
+  case ONLINE_STORE
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class TransactionTypeToString : ObjectiveC.NSObject {
+  @objc public static func toString(type: SurveillanceFramework.TransactionType) -> Swift.String
+  @objc public static func fromString(string: Swift.String) -> SurveillanceFramework.TransactionType
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class TransactionTypeEnumerator : ObjectiveC.NSObject {
+  public static func array() -> [SurveillanceFramework.TransactionType]
+  @objc public static func dictionary() -> [Swift.String : Foundation.NSNumber]
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public enum PaymentMethodType : Swift.Int, Swift.CaseIterable {
+  case CREDIT_CARD
+  case BANK_ACCOUNT
+  case ECHECK
+  case UNKNOWN
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+  public typealias AllCases = [SurveillanceFramework.PaymentMethodType]
+  public static var allCases: [SurveillanceFramework.PaymentMethodType] {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class PaymentMethodTypeToString : ObjectiveC.NSObject {
+  @objc public static func toString(type: SurveillanceFramework.PaymentMethodType) -> Swift.String
+  @objc public static func fromString(string: Swift.String) -> SurveillanceFramework.PaymentMethodType
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class PaymentMethodTypeEnumerator : ObjectiveC.NSObject {
+  public static func array() -> [SurveillanceFramework.PaymentMethodType]
+  @objc public static func dictionary() -> [Swift.String : Foundation.NSNumber]
+  @objc deinit
+  @objc override dynamic public init()
+}
+@_hasMissingDesignatedInitializers public class Payment {
+  public init(paymentMethod: SurveillanceFramework.PaymentMethodType? = nil, processor: Swift.String? = nil, fullNameOnCard: Swift.String? = nil, paymentMethodId: Swift.String? = nil, creditCardDetail: SurveillanceFramework.CreditCardDetail? = nil, bankAccountDetails: SurveillanceFramework.BankAccountDetails? = nil)
+  public func getJson() -> [Swift.String : Any]
+  public init(json: [Swift.String : Any])
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class Launch : SurveillanceFramework.CheckPoint {
+  @objc public init(userId: Swift.String? = nil)
+  @objc override public func getJson() -> [Swift.String : Any]
+  @objc required public init(json: [Swift.String : Any])
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class AuthorizationResponse {
+  public init(verificationStatus: Swift.String? = nil, aVSResultCode: Swift.String? = nil, declineReasonCode: Swift.String? = nil, declineReasonMessage: Swift.String? = nil, acquirerResponseCode: Swift.String? = nil, acquirerResponseMessage: Swift.String? = nil, threeDSResponseStatus: Swift.String? = nil, threeDSResponseEnrolled: Swift.String? = nil, threeDSResponseECI: Swift.String? = nil)
+  public func getJson() -> [Swift.String : Any]
+  @objc deinit
+}
+@objc public enum RiskLevel : Swift.Int, Swift.CaseIterable {
+  case expire = -2
+  case undefined = -1
+  case low = 0
+  case medium = 1
+  case high = 2
+  case veryHign = 3
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+  public typealias AllCases = [SurveillanceFramework.RiskLevel]
+  public static var allCases: [SurveillanceFramework.RiskLevel] {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class RiskLevelEnumerator : ObjectiveC.NSObject {
+  public static func array() -> [SurveillanceFramework.RiskLevel]
+  @objc public static func dictionary() -> [Swift.String : Foundation.NSNumber]
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class Risk : ObjectiveC.NSObject {
+  @objc public var riskLevel: SurveillanceFramework.RiskLevel {
+    get
+  }
+  @objc public func stringValue() -> Swift.String
+  @objc deinit
+  @objc override dynamic public init()
+}
+public class Address {
+  public init(firstName: Swift.String? = nil, lastName: Swift.String? = nil, addressLine1: Swift.String? = nil, addressLine2: Swift.String? = nil, city: Swift.String? = nil, state: Swift.String? = nil, country: Swift.String? = nil, postalCode: Swift.String? = nil, phoneNumber: Swift.String? = nil)
+  public func getJson() -> [Swift.String : Any]
+  public init(json: [Swift.String : Any])
+  @objc deinit
+}
+@objc public enum MobilePermission : Swift.Int, Swift.CaseIterable {
+  case readContacts
+  case authorizedAlways
+  case authorizedWhenInUse
+  case camera
+  case reminder
+  case calendar
+  case photo
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+  public typealias AllCases = [SurveillanceFramework.MobilePermission]
+  public static var allCases: [SurveillanceFramework.MobilePermission] {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class MobilePermissionToString : ObjectiveC.NSObject {
+  @objc public static func toString(type: SurveillanceFramework.MobilePermission) -> Swift.String
+  @objc public static func fromString(string: Swift.String) -> SurveillanceFramework.MobilePermission
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class MobilePermissionEnumerator : ObjectiveC.NSObject {
+  public static func array() -> [SurveillanceFramework.MobilePermission]
+  @objc public static func dictionary() -> [Swift.String : Foundation.NSNumber]
+  @objc deinit
+  @objc override dynamic public init()
+}
+@_hasMissingDesignatedInitializers public class User {
+  public init(userId: Swift.String? = nil, email: Swift.String? = nil, isEmailVerified: SurveillanceFramework.VerificationType? = nil, phoneUser: Swift.String? = nil, isPhoneVerified: SurveillanceFramework.VerificationType? = nil, address: SurveillanceFramework.Address? = nil)
+  public func getJson() -> [Swift.String : Any]
+  public init(json: [Swift.String : Any])
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class Login : SurveillanceFramework.CheckPoint {
+  public init(user: SurveillanceFramework.User?)
+  @objc public init(login: SurveillanceFramework.Login)
+  @objc override public func getJson() -> [Swift.String : Any]
+  @objc required public init(json: [Swift.String : Any])
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class AddPaymentMethod : SurveillanceFramework.CheckPoint {
+  public init(user: SurveillanceFramework.User? = nil, payment: SurveillanceFramework.Payment? = nil, billingAddress: SurveillanceFramework.Address? = nil)
+  @objc @available(*, deprecated, message: "no longer avalible...")
+  public init(userId: Swift.String, paymentMethodToken: Swift.String)
+  @objc override public func getJson() -> [Swift.String : Any]
+  @objc required public init(json: [Swift.String : Any])
+  @objc deinit
+}
+@objc public enum CheckPointType : Swift.Int, Swift.CaseIterable {
+  case LAUNCH
+  case REGISTER
+  case LOGIN
+  case TRANSACTION
+  case UPDATE_DETAILS
+  case ADD_PAYMENT_METHOD
+  case GENERAL
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+  public typealias AllCases = [SurveillanceFramework.CheckPointType]
+  public static var allCases: [SurveillanceFramework.CheckPointType] {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class CheckPointTypeToString : ObjectiveC.NSObject {
+  @objc public static func toString(type: SurveillanceFramework.CheckPointType) -> Swift.String
+  @objc public static func fromString(string: Swift.String) -> SurveillanceFramework.CheckPointType
+  public static func fromString(nillableString: Swift.String) -> SurveillanceFramework.CheckPointType?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class CheckPointTypeEnumerator : ObjectiveC.NSObject {
+  public static func array() -> [SurveillanceFramework.CheckPointType]
+  @objc public static func dictionary() -> [Swift.String : Foundation.NSNumber]
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_hasMissingDesignatedInitializers public class Transaction : SurveillanceFramework.CheckPoint {
+  @objc public init(time_nsdata: Foundation.NSDate, actType: SurveillanceFramework.TransactionType, curType: SurveillanceFramework.CurrencyCode, userID: Swift.String, amount: Swift.Double, destinationId: Swift.String, paymentMethod: Swift.String)
+  public init(time_stamp: Swift.Int64, actType: SurveillanceFramework.TransactionType, curType: SurveillanceFramework.CurrencyCode, destinationId: Swift.String? = nil, amount: Swift.Double, user: SurveillanceFramework.User? = nil, billingAddress: SurveillanceFramework.Address? = nil, shippingAddress: SurveillanceFramework.Address? = nil, payment: SurveillanceFramework.Payment? = nil, authorizationResponse: SurveillanceFramework.AuthorizationResponse? = nil)
+  @objc override public func getJson() -> [Swift.String : Any]
+  @objc required public init(json: [Swift.String : Any])
+  @objc deinit
+}
+extension SurveillanceFramework.PaygilantError : Swift.Equatable {}
+extension SurveillanceFramework.PaygilantError : Swift.Hashable {}
+extension SurveillanceFramework.CheckPointStatus : Swift.Equatable {}
+extension SurveillanceFramework.CheckPointStatus : Swift.Hashable {}
+extension SurveillanceFramework.CheckPointStatus : Swift.RawRepresentable {}
+extension SurveillanceFramework.SurveillanceType : Swift.Equatable {}
+extension SurveillanceFramework.SurveillanceType : Swift.Hashable {}
+extension SurveillanceFramework.VerificationType : Swift.Equatable {}
+extension SurveillanceFramework.VerificationType : Swift.Hashable {}
+extension SurveillanceFramework.VerificationType : Swift.RawRepresentable {}
+extension SurveillanceFramework.CurrencyCode : Swift.Equatable {}
+extension SurveillanceFramework.CurrencyCode : Swift.Hashable {}
+extension SurveillanceFramework.CurrencyCode : Swift.RawRepresentable {}
+extension SurveillanceFramework.TransactionType : Swift.Equatable {}
+extension SurveillanceFramework.TransactionType : Swift.Hashable {}
+extension SurveillanceFramework.TransactionType : Swift.RawRepresentable {}
+extension SurveillanceFramework.PaymentMethodType : Swift.Equatable {}
+extension SurveillanceFramework.PaymentMethodType : Swift.Hashable {}
+extension SurveillanceFramework.PaymentMethodType : Swift.RawRepresentable {}
+extension SurveillanceFramework.RiskLevel : Swift.Equatable {}
+extension SurveillanceFramework.RiskLevel : Swift.Hashable {}
+extension SurveillanceFramework.RiskLevel : Swift.RawRepresentable {}
+extension SurveillanceFramework.MobilePermission : Swift.Equatable {}
+extension SurveillanceFramework.MobilePermission : Swift.Hashable {}
+extension SurveillanceFramework.MobilePermission : Swift.RawRepresentable {}
+extension SurveillanceFramework.CheckPointType : Swift.Equatable {}
+extension SurveillanceFramework.CheckPointType : Swift.Hashable {}
+extension SurveillanceFramework.CheckPointType : Swift.RawRepresentable {}
