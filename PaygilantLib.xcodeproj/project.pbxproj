@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8119AC9A25E272E20062C455 /* EnrichmentFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DB57C025E26ECB00A09DB1 /* EnrichmentFramework.xcframework */; };
 		816994C125B9B60100E53AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816994C025B9B60100E53AF3 /* AppDelegate.swift */; };
 		816994C325B9B60100E53AF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816994C225B9B60100E53AF3 /* SceneDelegate.swift */; };
 		816994C525B9B60100E53AF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816994C425B9B60100E53AF3 /* ViewController.swift */; };
@@ -14,7 +15,6 @@
 		816994CA25B9B60500E53AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 816994C925B9B60500E53AF3 /* Assets.xcassets */; };
 		816994CD25B9B60500E53AF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 816994CB25B9B60500E53AF3 /* LaunchScreen.storyboard */; };
 		8169951125BD5E2500E53AF3 /* PGEnrichmentSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8169951025BD5E2500E53AF3 /* PGEnrichmentSDK.podspec */; };
-		81DB57C125E26ECB00A09DB1 /* EnrichmentFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DB57C025E26ECB00A09DB1 /* EnrichmentFramework.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81DB57C125E26ECB00A09DB1 /* EnrichmentFramework.xcframework in Frameworks */,
+				8119AC9A25E272E20062C455 /* EnrichmentFramework.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

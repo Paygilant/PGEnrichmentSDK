@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
 spec.version      = "1.0.0"
 spec.summary      = "Enrichment Service."
 spec.description  = <<-DESC
- Enrichment Service
+ Enrichment Service.
 DESC
 spec.name         = "PGEnrichmentSDK"
 spec.homepage     = "http://www.paygilant.com"
