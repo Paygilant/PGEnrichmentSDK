@@ -1,0 +1,11 @@
+framework module EnrichmentFramework {
+  umbrella header "EnrichmentFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module EnrichmentFramework.Swift {
+    header "EnrichmentFramework-Swift.h"
+    requires objc
+}

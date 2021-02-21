@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SurveillanceFramework
+import EnrichmentFramework
 class ViewController: UIViewController {
     public static let SERVER_URL = ""
 
