@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xFYWO1lBOBUhQaJrRrwLV+9ylZ0=
+		fmkzvhc+mln4SHpzZlsJPzLrEv8=
 		</data>
 		<key>Modules/EnrichmentFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/EnrichmentFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+XA4a42EBW6BrVT8683tIk61xqc=
+		kWPsoRSka9SeHJ+VAgI1JbphN/A=
 		</data>
 		<key>Modules/EnrichmentFramework.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/EnrichmentFramework.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		+XA4a42EBW6BrVT8683tIk61xqc=
+		kWPsoRSka9SeHJ+VAgI1JbphN/A=
 		</data>
 		<key>Modules/EnrichmentFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/EnrichmentFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		oIayyYLp1PNYgNFx1d+Cg9rVmzE=
+		THqjT7Za1nR+Qhm0UspouhDikng=
 		</data>
 		<key>Modules/EnrichmentFramework.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/EnrichmentFramework.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		oIayyYLp1PNYgNFx1d+Cg9rVmzE=
+		THqjT7Za1nR+Qhm0UspouhDikng=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -103,7 +103,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AiGYl+iurCEzWkOgUpvc7bMGs0igmWWH6Jog2POe30M=
+			+W4uDr9D+k+3FqhwAO8tsWmgxtuzUPdBxHR3eWdbovQ=
 			</data>
 		</dict>
 		<key>Modules/EnrichmentFramework.swiftmodule/arm64.swiftdoc</key>
@@ -124,7 +124,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AiGYl+iurCEzWkOgUpvc7bMGs0igmWWH6Jog2POe30M=
+			+W4uDr9D+k+3FqhwAO8tsWmgxtuzUPdBxHR3eWdbovQ=
 			</data>
 		</dict>
 		<key>Modules/EnrichmentFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -145,7 +145,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JJz49thz7u4i66qKVWgpQHheQ1JWd8kiS8IfmONnL94=
+			5hC4M1Dy9lYVJEWiqkhlXuq7RhKbQoYdwbUxJF26o3s=
 			</data>
 		</dict>
 		<key>Modules/EnrichmentFramework.swiftmodule/x86_64.swiftdoc</key>
@@ -166,7 +166,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JJz49thz7u4i66qKVWgpQHheQ1JWd8kiS8IfmONnL94=
+			5hC4M1Dy9lYVJEWiqkhlXuq7RhKbQoYdwbUxJF26o3s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
